@@ -110,7 +110,7 @@ CREATE TABLE `core_order` (
   PRIMARY KEY (`id`),
   KEY `core_order_buyer_id_75e0ab1b_fk_core_user_id` (`buyer_id`),
   CONSTRAINT `core_order_buyer_id_75e0ab1b_fk_core_user_id` FOREIGN KEY (`buyer_id`) REFERENCES `core_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `core_order` (
 
 LOCK TABLES `core_order` WRITE;
 /*!40000 ALTER TABLE `core_order` DISABLE KEYS */;
-INSERT INTO `core_order` VALUES (1,'2025-05-10 17:46:03.633048','pending',1),(2,'2025-05-10 17:51:26.788951','pending',1),(3,'2025-05-10 18:48:01.222549','pending',1),(4,'2025-05-10 18:51:40.742759','pending',1),(5,'2025-05-10 18:56:36.310947','pending',1);
+INSERT INTO `core_order` VALUES (1,'2025-05-10 17:46:03.633048','pending',1),(2,'2025-05-10 17:51:26.788951','pending',1),(3,'2025-05-10 18:48:01.222549','pending',1),(4,'2025-05-10 18:51:40.742759','pending',1),(5,'2025-05-10 18:56:36.310947','pending',1),(6,'2025-05-10 19:18:50.107056','pending',1),(7,'2025-05-10 19:22:41.467833','pending',1),(8,'2025-05-10 19:27:20.095922','pending',1);
 /*!40000 ALTER TABLE `core_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +142,7 @@ CREATE TABLE `core_orderitem` (
   CONSTRAINT `core_orderitem_order_id_30929c10_fk_core_order_id` FOREIGN KEY (`order_id`) REFERENCES `core_order` (`id`),
   CONSTRAINT `core_orderitem_product_id_0c2047cd_fk_core_product_id` FOREIGN KEY (`product_id`) REFERENCES `core_product` (`id`),
   CONSTRAINT `core_orderitem_chk_1` CHECK ((`quantity` >= 0))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +151,7 @@ CREATE TABLE `core_orderitem` (
 
 LOCK TABLES `core_orderitem` WRITE;
 /*!40000 ALTER TABLE `core_orderitem` DISABLE KEYS */;
-INSERT INTO `core_orderitem` VALUES (1,1,100.00,1,1),(2,1,100.00,2,1),(3,1,100.00,3,1),(4,1,100.00,4,1),(5,2,100.00,5,2);
+INSERT INTO `core_orderitem` VALUES (1,1,100.00,1,1),(2,1,100.00,2,1),(3,1,100.00,3,1),(4,1,100.00,4,1),(5,2,100.00,5,2),(6,5,150.00,6,3),(7,3,180.00,7,10),(8,3,180.00,8,10);
 /*!40000 ALTER TABLE `core_orderitem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +182,7 @@ CREATE TABLE `core_product` (
 
 LOCK TABLES `core_product` WRITE;
 /*!40000 ALTER TABLE `core_product` DISABLE KEYS */;
-INSERT INTO `core_product` VALUES (1,'Apple','A Fruit',100.00,6,2),(2,'Onion','A Vegetable',50.00,8,3),(3,'Carrot','A Vegetable',30.00,10,3),(4,'Beet Root','A Vegetable',40.00,10,3),(5,'Tomato','A Vegetable',50.00,10,3),(6,'Potato','A Vegetable',60.00,10,3),(7,'Banana','A Fruit',10.00,10,2),(8,'Orange','A Fruit',80.00,10,2),(9,'Grapes','A Fruit',90.00,10,2),(10,'Mango','A Fruit',60.00,10,2);
+INSERT INTO `core_product` VALUES (1,'Apple','A Fruit',100.00,6,2),(2,'Onion','A Vegetable',50.00,8,3),(3,'Carrot','A Vegetable',30.00,5,3),(4,'Beet Root','A Vegetable',40.00,10,3),(5,'Tomato','A Vegetable',50.00,10,3),(6,'Potato','A Vegetable',60.00,10,3),(7,'Banana','A Fruit',10.00,10,2),(8,'Orange','A Fruit',80.00,10,2),(9,'Grapes','A Fruit',90.00,10,2),(10,'Mango','A Fruit',60.00,4,2);
 /*!40000 ALTER TABLE `core_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -399,4 +399,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-11  0:40:48
+-- Dump completed on 2025-05-11  1:09:38
