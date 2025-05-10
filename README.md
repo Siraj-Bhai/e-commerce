@@ -17,7 +17,7 @@ This project is a basic e-commerce backend built using **Django**, **Django REST
 
 1. **Clone the repository**:
    ```bash
-   git clone
+   git clone https://github.com/Siraj-Bhai/e-commerce.git
    
 2. **Install Dependencies**:
    ```bash
